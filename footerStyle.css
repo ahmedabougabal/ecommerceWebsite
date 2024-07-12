@@ -1,0 +1,32 @@
+footer{
+    background-color: rgb(46, 82, 114);;
+}
+.footerList-box{
+    width: 30%;
+}
+.ListHeader{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+ul{
+    margin: 40px;
+    color: black;
+    list-style: none;
+}
+li{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.footerLink{
+    text-decoration: none;
+    color: black;
+}
+.footerLink:hover{
+    color: white;
+}
+.footerList-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
