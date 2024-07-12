@@ -1,0 +1,155 @@
+/*show product section*/
+#show-product-container-image{ 
+    
+    margin: auto;
+    margin-top: 60px;
+    width: 50%;
+    background-color: white;
+    float: left;
+    max-height: 100%;
+}
+#show-product-container-info{
+    
+    margin-top: 60px;
+    float: right;
+    width: 50%;
+}
+#product-image{
+    height: 80vh;
+    width: 80vw;
+   width: 70%;
+   margin-left: 100px;
+   
+}
+
+#show-product-header{
+    text-align:left;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    color: black;
+}
+#show-product-description{
+    color: rgb(22, 93, 89);
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 22.5px;
+    font-weight:600;
+}
+#show-product-rating{
+    color: rgb(22, 93, 89);
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 22.5px;
+    font-weight: 600;
+}
+#show-product-price{
+    color: rgb(22, 93, 89);
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 22.5px;
+    font-weight: 600;
+}
+#show-product-category{
+    color: rgb(22, 93, 89);
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 22.5px;
+    font-weight: 600;
+}
+#add-to-cart{
+    float: right;
+    margin-top: 30px;
+    margin-right: 100px;
+    width: 30%;
+    height: 60px;
+    border: 0px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 22.5px;
+}
+
+/* product Details section*/
+#product-details-header{
+    clear: both;
+    padding-top: 90px;
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#details-list{
+    list-style: square;
+    margin-bottom: 200px;
+    margin-left: 25px;
+    font-weight: 500;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    /* font-size: 200px; */
+    color: rgb(22, 93, 89);
+}
+#brand , #weight ,#width ,#height,#depth,#warrenty,#shipping{
+    font-size: 27px;
+}
+
+
+/*reviews section*/
+#reviews-section{
+    border-top: 0px solid black;
+    margin-top: -100px;
+}
+#reviews-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#reviews-container-header{
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.review-box{
+    border-radius: 20px;
+    background-color: #F5F7F8;
+    margin-bottom: 20px;
+}
+.reviewer-name{
+    margin-left: 12px;
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+.reviewer-email{
+    margin-left: 12px;
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 0px !important;
+    
+}
+.reviewer-comment{
+    margin-left: 12px;
+    color: #0d7ea0;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.reviewer-rating{
+    margin-left: 12px;
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 0px !important;
+}
+.review-date{
+    margin-left: 12px;
+    color: black;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
