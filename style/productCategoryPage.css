@@ -1,10 +1,8 @@
 #category-header{
-    margin-top: 30px;
-    margin-left: 30px;
-    font-weight: bold;
-    font-family: "Amazon Ember", Arial, sans-serif;
-    font-size: 50px;
-    color: rgba(30, 21, 21, 0.963);
+    margin-left: 100px;
+    font-family: Ubuntu;
+    font-size: 3rem;
+    color: rgb(46, 82, 114);
 }
 
 #products-container{
@@ -31,48 +29,46 @@
     border-radius: 20px;
 }
 .products-container-box-name{
-    color: black;
-    font-family: 'Playfair Display', serif;
+    color:rgb(46, 82, 114);
     font-weight: bold;
     font-size: 25px;
-    margin-left: 15px;
+    margin-left: 5px;
     display: block;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: Ubuntu;
+    padding-left:20px;
+    max-height: 100%;
+    margin: 3px 0;
 }
+
 .products-container-box-name:hover{
     color:gray;
 }
-.products-container-box-brand , .products-container-box-price{
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    margin-left: 15px;
-}
 
+.products-container-box-brand , .products-container-box-price{
+    color:rgb(46, 82, 114);
+    font-size: 20px;
+    margin-left: 5px;
+    display: block;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: Ubuntu;
+    padding-left:20px;
+    max-height: 100%;
+    margin: 3px 0;
+}
 .products-container-box-addToCart{
     float: right;
     border: 0px;
-    margin: 0 20px 20px 0; 
+    margin: 0 20px 20px 0;
     width: 45%;
     height: 45px;
     border-radius: 15px;
-    background-color: black;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    cursor: pointer;
-}
-#load-Products-button{
-    margin: 25px 0  0 42%;
-    width: 15%;
-    height: 30px;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: black;
+    background-color:rgb(46, 82, 114);
+    color: #e1dfdf;
     text-align: center;
     font-size: 20px;
-    background-color: lightgrey;
-    border: 0px;
+    font-family: Ubuntu;
     cursor: pointer;
-    border-radius: 20px;
-    
 }

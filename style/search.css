@@ -27,32 +27,27 @@
     border-radius: 20px;
 }
 .products-container-box-name{
-    color: black;
-    font-family: 'Playfair Display', serif;
+    color:rgb(46, 82, 114);
     font-weight: bold;
     font-size: 25px;
     margin-left: 5px;
-}
-.products-container-box-brand , .products-container-box-price{
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    margin-left: 5px;
-}
-.products-container-box-addToCart{
-    float: right;
-    border: 0px;
-    margin: 0 20px 20px 0;
-    width: 45%;
-    height: 45px;
-    border-radius: 15px;
-    background-color: black;
-    text-align: center;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    display: block;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    font-family: Ubuntu;
+    padding-left:20px;
+    max-height: 100%;
+    margin: 3px 0;
 }
 
-.products-container-box-name,.products-container-box-brand,.products-container-box-price{
+.products-container-box-name:hover{
+    color:gray;
+}
+
+.products-container-box-brand , .products-container-box-price{
+    color:rgb(46, 82, 114);
+    font-size: 20px;
+    margin-left: 5px;
     display: block;
     box-sizing: border-box;
     white-space: pre-wrap;
@@ -62,6 +57,16 @@
     margin: 3px 0;
 }
 .products-container-box-addToCart{
+    float: right;
+    border: 0px;
+    margin: 0 20px 20px 0;
+    width: 45%;
+    height: 45px;
+    border-radius: 15px;
+    background-color:rgb(46, 82, 114);
+    color: #e1dfdf;
+    text-align: center;
+    font-size: 20px;
     font-family: Ubuntu;
-    align-self: flex-end;
+    cursor: pointer;
 }

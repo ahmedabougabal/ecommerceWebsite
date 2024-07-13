@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
  function getCategoryFromUrl(){
     let categoryName;
     let pageUrl = new URLSearchParams(window.location.search);
-    categoryName = pageUrl.get('category');
-    console.log(categoryName);
-    document.title = categoryName;
+    categoryName = pageUrl.get('category').charAt(0).toUpperCase() + pageUrl.get('category').slice(1);
+    document.title = "MOHA Store " + categoryName;
 
     document.getElementById('category-header').textContent = categoryName + " Products";
     getCategoryProducts(categoryName);
@@ -31,20 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
  async function getCategoryProducts(categoryName){
     try{
         let response = await fetch(`https://dummyjson.com/products/category/${categoryName}`);
-         let product = await response.json();
-         console.log("here");
+        let product = await response.json();
         createElements(product);
     }catch(error){
         console.error('Error fetching products:', error);
     }
-    
-    
  }
 
  function createElements(product){
-    console.log("here2");
     let productsContainer = document.getElementById('products-container'); 
-    console.log("here3");
     product.products.forEach(product => {
             let divBox = document.createElement('div');
             let name = document.createElement('a');
@@ -73,7 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
             divBox.appendChild(addToCart);
             productsContainer.appendChild(divBox);
         });
-        
-       
-   
  }

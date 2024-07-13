@@ -52,7 +52,7 @@ if(product){
             
                         image.src = product.thumbnail;
                         name.textContent = product.title;
-                        name.href = `singleProductPage.html?productId=${encodeURIComponent(product.id)}&productName=${encodeURIComponent(product.title)}`;;
+                        name.href = `singleProductPage.html?productId=${encodeURIComponent(product.id)}&productName=${encodeURIComponent(product.title)}`;                        ;
                         name.target = '_blank';
                         brand.textContent = "Brand: " + product.brand;
                         price.textContent = "Price: "+product.price+"$";
@@ -66,7 +66,7 @@ if(product){
                         productsContainer.appendChild(divBox);
                 }else if(!exist){
                     query.innerHTML = `No results for ${paramValue.get('product')}`
-                    query.style.marginBottom='175px';
+                    query.style.marginBottom='50px';
                     
                 }});
                 }
