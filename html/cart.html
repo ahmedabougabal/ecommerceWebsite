@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/cart.css">
+    <title>cart</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h3>Shopping Cart</h3>
+        <div class="sub-wrapper">
+        <div class="cart-details">
+            <div class="cart-sub-details">
+                <div class="product">product</div>
+                <div class="product-details">
+                    <div>Price</div>
+                    <div>Quantity</div>
+                    <div class="clear-cart">Clear Cart</div>
+                </div>
+
+            </div>
+            <div id="items"></div>
+        </div>
+        <div class="summary">
+            <div class="order-summary">Order Summary</div>
+            <hr>
+            <div class="subtotal">
+                <div id="number_of_items"></div>
+                <div id="subtotal-total"></div>
+            </div>
+            <div class="saving">
+                <div></div>
+                <div id="saving-total"></div>
+            </div>
+            <div class="shipping">
+                <div>Shipping</div>
+                <div class="free-shipping">Calculated on checkout</div>
+            </div>
+            <hr>
+            <div class="estimated-total">
+                <div>Estimated Total:</div>
+                <div id="estimated-total-total"></div>
+            </div>
+            <button class="checkout">Proceed to Checkout > </button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/cart.js"></script>
+</body>
+</html>
