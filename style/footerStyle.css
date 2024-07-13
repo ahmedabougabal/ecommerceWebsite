@@ -15,11 +15,11 @@ ul{
     color: rgb(42, 40, 40);
     list-style: none;
 }
-li{
+.listfooter{
     font-family: Ubuntu;
     font-size: 15px;
-    margin-top: 5px;
     color: rgb(42, 40, 40);
+    margin: 2px;
 }
 .footerLink{
     text-decoration: none;

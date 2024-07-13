@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link href="signstyle.css" rel="stylesheet" />
+    <link href="../style/signstyle.css" rel="stylesheet" />
   </head>
   <body>
     <div id="content">
       <div id="formDiv">
         <div id="store">
-          <img src="Assets/cart.svg" />
+          <img src="../Images/cart.svg" />
           <h2>MOHA STORE</h2>
         </div>
         <div id="welcome">
@@ -25,7 +25,7 @@
             Don't have an account? <a href="signup.html">Create an account</a>
           </p>
         </div>
-        <form id="form" action="#" method="post" onsubmit="login(event)">
+        <form id="form" action="mainPage.html" method="post" onsubmit="login(event)">
           <input
             class="email"
             type="text"
@@ -40,7 +40,7 @@
               placeholder="Password"
               required
             />
-            <img src="Assets/eye-password-show.svg" />
+            <img src="../Images/eye-password-show.svg" />
           </div>
 
           <div id="SignInCheck">
@@ -67,20 +67,20 @@
         </div>
         <div id="socialMedia">
           <button onclick="sendToGoogle()">
-            <img src="Assets/google.svg" />Google
+            <img src="../Images/google.svg" />Google
           </button>
           <button onclick="sendToFacebook()">
-            <img src="Assets/facebook.svg" />Facebook
+            <img src="../Images/facebook.svg" />Facebook
           </button>
           <button onclick="sendToApple()">
-            <img src="Assets/apple-173.svg" />Apple
+            <img src="../Images/apple-173.svg" />Apple
           </button>
         </div>
       </div>
       <div id="imageDiv">
-        <img src="Assets/account-cover.png" id="poster" />
+        <img src="../Images/account-cover.png" id="poster" />
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
