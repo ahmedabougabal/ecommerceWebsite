@@ -55,7 +55,10 @@
               placeholder="Password"
               required
             />
-            <img src="Assets/eye-password-show.svg" />
+            <img
+              src="Assets/eye-password-show.svg"
+              onclick="togglePasswordVisibility();"
+            />
           </div>
           <label for="password">Minimum 8 characters</label>
           <input
@@ -66,7 +69,7 @@
             placeholder="Repeat Password"
             required
           />
-          <div id="rememberMe">
+          <div id="SignUpCheck">
             <input type="checkbox" value="Login" onclick="ticked()" />
             <label for="remember"
               >I have read and accept the

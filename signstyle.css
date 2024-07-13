@@ -132,7 +132,7 @@ p a:hover{
     cursor: pointer;
 }
 
-#rememberMe{
+#SignUpCheck{
     width: 100%;
     display: inline-block;
     display: flex;
@@ -141,7 +141,7 @@ p a:hover{
     margin: 10px 0;
 }
 
-#rememberMe a{
+#SignUpCheck a{
     margin-left: auto;
     text-align: end;
     color: black;
@@ -150,7 +150,7 @@ p a:hover{
     padding-bottom: 2px;
 }
 
-#rememberMe a:after{
+#SignUpCheck a:after{
     background-color: black;
     width: 100%;
     content: "";
@@ -162,13 +162,12 @@ p a:hover{
     left: 0;
     transition: all 0.5s;
 }
-#rememberMe a:hover::after{
+#SignUpCheck a:hover::after{
     width: 100%;
     transform: scaleX(1);
-
 }
 
-#rememberMe input{
+#SignUpCheck input{
     width: 1.3em;
     height: 1.3em;
     margin: 0;
@@ -179,6 +178,55 @@ p a:hover{
     border: 1px solid grey;
 }
 
+/* --------handling remember me inside the login page--------- */
+
+#SignInCheck{
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0;
+}
+
+#SignInCheck a{
+    margin-left: auto;
+    text-align: end;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+#SignInCheck a:after{
+    background-color: black;
+    width: 100%;
+    content: "";
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+#SignInCheck a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+}
+
+#SignInCheck input{
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0;
+    margin-right: 5px ;
+    margin-left: 5px;
+    border-radius: 8px;
+    accent-color: white;
+    border: 1px solid grey;
+}
+
+/* ------------------ */
 
 #submit{
     max-width: 100%;
