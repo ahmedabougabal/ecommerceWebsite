@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Function to load content from a file and insert it into an element
     function loadContent(elementId, filePath) {
@@ -8,52 +10,42 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Error loading content:', error));
     }
-    loadContent('header', '../html/navBar.HTML');
-    loadContent('footer', '../html/Footer.html');
+     loadContent('header', '../html/navBar.HTML');
+     loadContent('footer', '../html/Footer.html');
+
+    getCategoryFromUrl();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    //slider code
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".mySlides");
+ function getCategoryFromUrl(){
+    let categoryName;
+    let pageUrl = new URLSearchParams(window.location.search);
+    categoryName = pageUrl.get('category');
+    console.log(categoryName);
+    document.title = categoryName;
 
-    function showSlides() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].style.display = "block";
-    }       
-    showSlides();
-    setInterval(showSlides, 3000);
-});
+    document.getElementById('category-header').textContent = categoryName + " Products";
+    getCategoryProducts(categoryName);
 
+ }
 
-async function getProducts(){
-    //fetch products code      
-        try {
-            
-             let response = await Promise.all([
-                fetch(`https://dummyjson.com/products/category/smartphones?limit=0`),
-                fetch(`https://dummyjson.com/products/category/laptops?limit=0`),
-                fetch(`https://dummyjson.com/products/category/mobile-accessories?limit=0`),
-                fetch(`https://dummyjson.com/products/category/tablets?limit=0`)
-             ]);
-             let jsonProducts = await Promise.all(response.map(response=> response.json()));
-             createElemnts(jsonProducts);
-        } catch (error) {
-            console.error('Error fetching products:', error);
-        }
-           
+ async function getCategoryProducts(categoryName){
+    try{
+        let response = await fetch(`https://dummyjson.com/products/category/${categoryName}`);
+         let product = await response.json();
+         console.log("here");
+        createElements(product);
+    }catch(error){
+        console.error('Error fetching products:', error);
     }
+    
+    
+ }
 
-document.addEventListener('DOMContentLoaded', getProducts());
-
-
- function createElemnts(jsonProducts){
+ function createElements(product){
+    console.log("here2");
     let productsContainer = document.getElementById('products-container'); 
-    for(var i =0 ; i<jsonProducts.length;i++){
-        jsonProducts[i].products.forEach(product => {
+    console.log("here3");
+    product.products.forEach(product => {
             let divBox = document.createElement('div');
             let name = document.createElement('a');
             let image = document.createElement('img');
@@ -66,7 +58,6 @@ document.addEventListener('DOMContentLoaded', getProducts());
             brand.className = 'products-container-box-brand';
             price.className = 'products-container-box-price';
             addToCart.className = 'products-container-box-addToCart';
-
             image.src = product.thumbnail;
             name.textContent = product.title;
             name.href = `singleProductPage.html?productId=${encodeURIComponent(product.id)}&productName=${encodeURIComponent(product.title)}`;;
@@ -82,15 +73,7 @@ document.addEventListener('DOMContentLoaded', getProducts());
             divBox.appendChild(addToCart);
             productsContainer.appendChild(divBox);
         });
-        }
-}
-
-
-//dropdown menu code
-let dropDownMenu = document.getElementById("Categories");
-dropDownMenu.addEventListener('change', function() {
-    let productCateogry = dropDownMenu.value;
-    window.open(`../html/productCategoryPage.html?category=` + productCateogry, '_blank');
-
-
-});
+        
+       
+   
+ }

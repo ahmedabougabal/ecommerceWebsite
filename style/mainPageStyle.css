@@ -58,6 +58,20 @@
 }
 
 /*products section*/
+#Categories-label{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 35px;
+    margin-left: 30px;
+}
+#Categories{
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
 #products-container{
     display: flex;
     flex-direction: row;
