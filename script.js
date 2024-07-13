@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   checkLogin();
+  fillRememberedEmail(); // this is a function that works if the user 
+  // ticked the rememberMe checkbox on the sign in page that is triggered
+  // when the dom is loaded and it reFILLS THE EMAIL input field instantly
+  // + it also displays the checkbox as ticked if an email is found! lol  
   const eyeIcon = document.querySelector('#password img');
   eyeIcon.addEventListener('click', togglePasswordVisibility);
 });
@@ -7,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function register(event) {
   event.preventDefault();
 
-  const rememberMeChecked = document.querySelector('#rememberMe input[type="checkbox"]').checked;
-  if (!rememberMeChecked) {
+  const policyChecked = document.querySelector('#rememberMe input[type="checkbox"]').checked;
+  if (!policyChecked) {
     alert('You must read and accept the Privacy Policy.');
     return;
   }
@@ -53,9 +57,28 @@ function register(event) {
 }
 
 function ticked() {
-  const rememberMeChecked = document.querySelector('#rememberMe input[type="checkbox"]').checked;
-  if (!rememberMeChecked) {
+  const policyChecked = document.querySelector('#SignUpCheck input[type="checkbox"]').checked;
+  if (!policyChecked) {
     alert('You must read and accept the Privacy Policy.');
+  }
+}
+
+function rememberMe() {
+  const remembered = document.querySelector('#rememberMeCheckbox').checked;
+  const emailField = document.querySelector('input[name="email"]');
+
+  if (remembered) {
+    localStorage.setItem('rememberedEmail', emailField.value);
+  } else {
+    localStorage.removeItem('rememberedEmail');
+  }
+}
+
+function fillRememberedEmail() {
+  const rememberedEmail = localStorage.getItem('rememberedEmail');
+  if (rememberedEmail) {
+    document.querySelector('input[name="email"]').value = rememberedEmail;
+    document.querySelector('#rememberMeCheckbox').checked = true;
   }
 }
 
@@ -78,10 +101,6 @@ function login(event) {
 function checkLogin() {
   const token = localStorage.getItem('token');
   if (token === 'authenticated') {
-    /*this line will redirect the user to his 
-    profile if he is already logged in 
-    as no need to sign in again and this is 
-    the functionality of the token :) */
     window.location.href = "profile.html";
   }
 }
@@ -90,7 +109,6 @@ function logout() {
   localStorage.removeItem('token');
   window.location.href = "login.html";
 }
-
 
 function togglePasswordVisibility() {
   const passwordField = document.querySelector('#password input[name="password"]');
