@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="cart.css">
     <title>cart</title>
 </head>
@@ -27,12 +28,16 @@
             <div class="order-summary">Order Summary</div>
             <hr>
             <div class="subtotal">
-                <div>Subtotal (number of items)</div>
-                <div class="subtotal-total">$ 100</div>
+                <div id="number_of_items"></div>
+                <div id="subtotal-total"></div>
+            </div>
+            <div class="saving">
+                <div>saving:</div>
+                <div class="saving-total">x</div>
             </div>
             <div class="shipping">
                 <div>Shipping</div>
-                <div class="free-shipping">Free shipping</div>
+                <div class="free-shipping">Calculated on checkout</div>
             </div>
             <hr>
             <div class="estimated-total">
@@ -43,6 +48,6 @@
             </div>
         </div>
     </div>
-    <script src="cart.js"></script>
+    <script src="mock.js"></script>
 </body>
 </html>
