@@ -176,3 +176,13 @@ h3{
     display: flex;
     flex-direction: row;
   }
+
+  .remove-item {
+    cursor: pointer; 
+    transition: transform 0.3s, color 0.3s; 
+}
+
+.remove-item:hover {
+    transform: scale(1.2); 
+
+}
