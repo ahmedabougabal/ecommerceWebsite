@@ -4,25 +4,27 @@
 <title>MOHA Store</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="navBarStyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         
-        <span class="logo-span">
+        <div class="logo-div">
             <img src="Images/cart.svg" class="logo-image">
-            <h1 class="logo"><a href="#">MOHA STORE</a></h1>    
-        </span>
-        <div class="search-container">
-            <img src="Images/search.jpg" class="search-image"> 
-            <input type="text" placeholder="Search Here" class="Search-field">
+            <h1 class="logo"><a href="mainPage.html">MOHA STORE</a></h1>    
         </div>
-        
-       
-      <ul class="main-nav">
-          <li><a href="mainPage.html">Home</a></li>
-          <li><a href="mainPage.html">About</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="mainPage.html">Contact</a></li>
-      </ul>
+        <div class="search-container">
+            <form action="search.html" method="get">
+                <input type="text" name="product" placeholder="Search Here" class="search-field">
+            </form> 
+        </div>
+        <ul class="main-nav">
+            <li><a href="mainPage.html">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="mainPage.html">My Cart</a></li>
+            <li><a href="signin.html">Log Out</a></li>
+        </ul>
     </header> 
 </body>

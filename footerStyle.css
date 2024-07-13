@@ -1,26 +1,30 @@
 footer{
     background-color: rgb(46, 82, 114);;
+    padding-bottom: 5px;
 }
 .footerList-box{
     width: 30%;
 }
 .ListHeader{
-    color: white;
-    font-family: 'Playfair Display', serif;
+    color: #93A3B1;
+    font-family: Ubuntu;
     font-size: 20px;
 }
 ul{
     margin: 40px;
-    color: black;
+    color: rgb(42, 40, 40);
     list-style: none;
 }
 li{
+    font-family: Ubuntu;
     font-size: 15px;
     margin-top: 5px;
+    color: rgb(42, 40, 40);
 }
 .footerLink{
     text-decoration: none;
-    color: black;
+    font-family: Ubuntu;
+    color: rgb(42, 40, 40);
 }
 .footerLink:hover{
     color: white;
@@ -29,4 +33,12 @@ li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+footer > p{
+    text-align: center;
+    color: #93A3B1;
+    margin-bottom: 5px; 
+    font-size: 20px; 
+    font-family: Ubuntu;
+    margin-top: 0;
 }
