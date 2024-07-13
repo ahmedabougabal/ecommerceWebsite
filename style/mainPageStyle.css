@@ -73,6 +73,7 @@
     width: 25%;
     height: 20%;
     border-radius: 20px;
+    
 }
 .products-container-box-image{
     width: 100%;
@@ -84,7 +85,8 @@
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 25px;
-    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
 }
 .products-container-box-name:hover{
     color:gray;
@@ -92,12 +94,13 @@
 .products-container-box-brand , .products-container-box-price{
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
+
 .products-container-box-addToCart{
     float: right;
     border: 0px;
-    margin: 0 20px 20px 0;
+    margin: 0 20px 20px 0; 
     width: 45%;
     height: 45px;
     border-radius: 15px;
@@ -106,8 +109,7 @@
     color: white;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    
-    
+    cursor: pointer;
 }
 #load-Products-button{
     margin: 25px 0  0 42%;
