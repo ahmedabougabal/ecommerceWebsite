@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOHA STORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="signstyle.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="formDiv">
+        <div id="store">
+          <img src="Assets/cart.svg" />
+          <h2>MOHA STORE</h2>
+        </div>
+        <div id="welcome">
+          <h1>Welcome back</h1>
+          <p>
+            Don't have an account? <a href="signup.html">Create an account</a>
+          </p>
+        </div>
+        <form id="form" action="#" method="post" onsubmit="login(event)">
+          <input
+            class="email"
+            type="text"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <div id="password">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <img src="Assets/eye-password-show.svg" />
+          </div>
+
+          <div id="rememberMe">
+            <input type="checkbox" value="Login" />
+            <label for="remember">Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <input
+            id="submit"
+            onclick="checkLogin();"
+            type="submit"
+            value="Sign In"
+          />
+        </form>
+        <div id="splash">
+          <hr />
+          <p>or continue with</p>
+          <hr />
+        </div>
+        <div id="socialMedia">
+          <button onclick="sendToGoogle()">
+            <img src="Assets/google.svg" />Google
+          </button>
+          <button onclick="sendToFacebook()">
+            <img src="Assets/facebook.svg" />Facebook
+          </button>
+          <button onclick="sendToApple()">
+            <img src="Assets/apple-173.svg" />Apple
+          </button>
+        </div>
+      </div>
+      <div id="imageDiv">
+        <img src="Assets/account-cover.png" id="poster" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
