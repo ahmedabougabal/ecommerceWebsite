@@ -96,6 +96,7 @@
     try {
       while (cart_queue.length > 0) {
         const newProduct = cart_queue.shift();
+
     // Fetch current data from JSONBin.io
     const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
       headers: {
