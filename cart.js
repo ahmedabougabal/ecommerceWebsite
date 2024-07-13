@@ -10,9 +10,9 @@
 
 /*               */
 
+let cart_queue = [];
 let Update_flag = false;
 
-const cart_queue = [];
 
   const binId = '668d8601e41b4d34e40f81e7';
 const apiKey = '$2a$10$oFTM9uqaBHpQjTjZZLIUauYv6mAMtPqAgdACQF7TE2jYo91EMBBti';
@@ -39,27 +39,46 @@ function displayItems(data){
   <div>${data.title}</div>
   <div>${data.price}</div>
   <img src="${data.images[0]}" width="150px">
-  <button onClick="addToCart('${data.id}', '${data.price}','${data.discountPercentage}', '${data.images[0]}', '${data.title.replace(/'/g, "\\'")}','${data.brand}','${data.quantity}')" class="add-to-cart">click me to add to cart</button>
+  <button onClick="addToCart('${data.id}', '${data.price}','${data.discountPercentage}', '${data.images[0]}', '${data.title.replace(/'/g, "\\'")}','${data.brand}')" class="add-to-cart">click me to add to cart</button>
   `
   document.getElementById("something").innerHTML += item
+  console.log("Items in cart:", cart_queue);
 }
  
-// function  to add item to cart
-async function addToCart(itemID,itemPrice,itemDiscount,itemImage,itemTitle,itemBrand,itemQuantity){
+
+
+// function  to add items to the waiting queue 
+async function addToCart(itemID,itemPrice,itemDiscount,itemImage,itemTitle,itemBrand){
+
 
 try {
-  // Construct the new product object using function parameters
-  const newProduct = {
-    "id": itemID,
-    "image": itemImage,
-    "price": itemPrice,
-    "title": itemTitle,
-    "discount" : itemDiscount,
-    "brand" : itemBrand,
-    "quantity" : itemQuantity
-  };
+      let newProduct;
+      let item_exists_flag = false
 
-  cart_queue.push(newProduct)
+      // check if the product already exists in the queue of items
+      for (let i=0;i<cart_queue.length;i++){
+        if(itemID == cart_queue[i].id){
+          cart_queue[i].quantity++;
+          item_exists_flag = true
+          break;
+        }
+      }
+
+  // Construct the new product object using function parameters if it does not exist in the queue
+      if(!item_exists_flag){
+         newProduct = {
+          "id": itemID,
+          "image": itemImage,
+          "price": itemPrice,
+          "title": itemTitle,
+          "discount" : itemDiscount, 
+          "brand" : itemBrand,
+          "quantity" : 1
+        };
+        cart_queue.push(newProduct)
+      }
+
+ 
 
   if(Update_flag== false){
     Update_flag = true
@@ -70,6 +89,9 @@ try {
   }
 
 }
+
+// functionto proccess the products in the queue
+
 async function  process_queue(){
 
   try {
@@ -87,10 +109,22 @@ async function  process_queue(){
   }
 
   const currentData = await response.json();
-  console.log('Current JSON data:', currentData);
+   
+  //check if the product exists int he current Data !
+  let product_exists_flag = false;
+  for (let i=0; i<currentData.record.products.length;i++){
+    if(currentData.record.products[i].id == newProduct.id)
+    {
+      currentData.record.products[i].quantity += newProduct.quantity;
+      product_exists_flag = true;
+      break;
+    }
+  }
 
-  // Update the products array with the new product
-  currentData.record.products.push(newProduct);
+    if(!product_exists_flag){
+      // Update the products array with the new product
+       currentData.record.products.push(newProduct);
+    }
 
   // Update JSONBin.io with the modified data
   const updateResponse = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
