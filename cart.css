@@ -1,12 +1,13 @@
 
 body{
     background-color: #ffffff;
+    font-size: 16px;
 }
 .wrapper{
     margin-top: 200px;
 }
 h3{
-    margin-left: 220px;
+    margin-left: 100px;
 }   
 
 .cart-details{
@@ -25,10 +26,14 @@ h3{
     justify-content: space-between;
 
 }
-.product-details{
+.product-details{   
     display: flex;
-    flex-direction: row;
-    gap: 100px; ;
+    flex-direction: row;    
+     gap: 120px;
+}
+.product{
+    position: relative;
+    right: 120px;
 }
 .summary{
     grid-column: span 2;
@@ -62,11 +67,19 @@ h3{
     margin-top: 15px;
     align-items: center;
 }
+.saving{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
 .shipping{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .checkout{
     width: 300px;
@@ -106,3 +119,60 @@ h3{
 .items{
     margin-top: 30px;
 }
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  .quantity-control button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .quantity-control button:hover {
+    background-color: #0056b3;
+  }
+  .quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    padding: 6px 10px;
+    margin: 0 10px;
+  }
+
+  /* css for the displayed products */ 
+
+  
+  #items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  } 
+  .product-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .divWrap{
+    display: flex;      
+    flex-direction: column; 
+    align-items: flex-start
+    
+  }
+  .subWrap{
+    display: flex;
+    flex-direction: row;    
+    gap: 5px;
+
+  }
+  .brandSpan{
+    display: flex;
+    flex-direction: row;
+  }
