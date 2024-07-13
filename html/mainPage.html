@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MOHA Store</title>
-<link rel="stylesheet" href="mainPageStyle.css">
+<link rel="stylesheet" href="../style/mainPageStyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -26,32 +26,41 @@
 
     <div class="slider-container">
         <div class="mySlides">
-            <img src="Images/slide1.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide1.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         <div class="mySlides">
-            <img src="Images/slide2.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide2.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         
         <div class="mySlides">
-            <img src="Images/slide4.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide4.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         <div class="mySlides">
-            <img src="Images/slide5.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide5.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         <div class="mySlides">
-            <img src="Images/slide8.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide8.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         <div class="mySlides">
-            <img src="Images/slide9.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide9.jpg" class="slide-image" alt="Slider Image"> 
         </div>
         <div class="mySlides">
-            <img src="Images/slide10.jpg" class="slide-image" alt="Slider Image"> 
+            <img src="../Images/slide10.jpg" class="slide-image" alt="Slider Image"> 
         </div>
     </div>
 
    </section>
    <br>
+   <br>
    <section class="Products-section">
+         <label id="Categories-label" for="Categories">Products Categories:</label>
+            <select name="Categories" id="Categories">
+                <option value="" selected disabled>Choose Product Category</option>
+                <option value="smartphones">Smartphones</option>
+                <option value="laptops">Laptops</option>
+                <option value="mobile-accessories">Mobile-Accessories</option>
+                <option value="tablets">Tablets</option>
+            </select>
         <div id="products-container"> </div>
    </section>
    <br>
@@ -61,28 +70,28 @@
     </div>
    <div class="thiredSectioin-flexBox">
         <div class="thiredSectioin-flexBox-box">
-            <img src="Images/t1.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
+            <img src="../Images/t1.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
             <h3 class="thiredSectioin-flexBox-box-header">Free Shipping & Returns</h3>
             <p class="thiredSectioin-flexBox-box-text">
                 For all orders over $199.00
             </p>
         </div>
         <div  class="thiredSectioin-flexBox-box">
-            <img src="Images/t2.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
+            <img src="../Images/t2.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
             <h3 class="thiredSectioin-flexBox-box-header">Secure Payment</h3>
             <p class="thiredSectioin-flexBox-box-text">
                 We ensure secure payment
             </p>
         </div>
         <div  class="thiredSectioin-flexBox-box">
-            <img src="Images/t3.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
+            <img src="../Images/t3.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
             <h3 class="thiredSectioin-flexBox-box-header">Money Back Guarantee</h3>
             <p class="thiredSectioin-flexBox-box-text">
                 Returning money 30 days
             </p>
         </div>
         <div  class="thiredSectioin-flexBox-box">
-            <img src="Images\t4.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
+            <img src="../Images/t4.jpg" class="thiredSectioin-flexBox-box-image" alt="image">
             <h3 class="thiredSectioin-flexBox-box-header">24/7 Customer Support</h3>
             <p class="thiredSectioin-flexBox-box-text">
                 Friendly customer support
@@ -94,6 +103,6 @@
     <footer>
         <div id="footer"></div>
     </footer>
-    <script src="jsMainPage.js" defer></script>
+    <script src="../js/jsMainPage.js" defer></script>
   
 </body>

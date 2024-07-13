@@ -8,7 +8,7 @@
  
  /*section one*/
  .firstSection {
-     background-image: url('Images/bg3.jpg');
+     background-image: url('../Images/bg3.jpg');
      height: 100vh;
      width: 99vw;
    background-size: cover;
@@ -60,6 +60,20 @@
 }
 
 /*products section*/
+#Categories-label{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 35px;
+    margin-left: 30px;
+}
+#Categories{
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
 #products-container{
     display: flex;
     flex-direction: row;
@@ -75,6 +89,7 @@
     width: 25%;
     height: 20%;
     border-radius: 20px;
+    
 }
 .products-container-box-image{
     width: 100%;
@@ -86,17 +101,22 @@
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 25px;
-    margin-left: 5px;
+    margin-left: 15px;
+    display: block;
+}
+.products-container-box-name:hover{
+    color:gray;
 }
 .products-container-box-brand , .products-container-box-price{
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
+
 .products-container-box-addToCart{
     float: right;
     border: 0px;
-    margin: 0 20px 20px 0;
+    margin: 0 20px 20px 0; 
     width: 45%;
     height: 45px;
     border-radius: 15px;
@@ -105,8 +125,7 @@
     color: white;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    
-    
+    cursor: pointer;
 }
 
 /*thired Section*/
@@ -134,14 +153,14 @@
 
 .thiredSectioin-flexBox-box{
     width: 20%;
-    height: 20%;
+    height: 40%;
     margin-top: 25px;
     background-color: transparent;
     border-radius: 20px;
     
 }
 .thiredSectioin-flexBox-box-image{
-    height: 8vh;
+    height: 10vh;
     width: 5vw;
     border-radius: 20px;
 }
