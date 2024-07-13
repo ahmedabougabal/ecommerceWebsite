@@ -78,13 +78,28 @@ function login(event) {
 function checkLogin() {
   const token = localStorage.getItem('token');
   if (token === 'authenticated') {
+    /*this line will redirect the user to his 
+    profile if he is already logged in 
+    as no need to sign in again and this is 
+    the functionality of the token :) */
     window.location.href = "profile.html";
   }
 }
 
 function logout() {
   localStorage.removeItem('token');
-  localStorage.removeItem('user');
   window.location.href = "login.html";
 }
 
+
+function togglePasswordVisibility() {
+  const passwordField = document.querySelector('#password input[name="password"]');
+  const eyeIcon = document.querySelector('#password img');
+  if (passwordField.type === 'password') {
+    passwordField.type = 'text';
+    eyeIcon.src = 'Assets/eye-password-hide.svg'; // Update to hide icon
+  } else {
+    passwordField.type = 'password';
+    eyeIcon.src = 'Assets/eye-password-show.svg'; // Update to show icon
+  }
+}
