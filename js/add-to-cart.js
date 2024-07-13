@@ -17,37 +17,11 @@
     const apiKey = '$2a$10$oFTM9uqaBHpQjTjZZLIUauYv6mAMtPqAgdACQF7TE2jYo91EMBBti';
 
       
-    //   // get 3 items using fetch api
 
-      async function getProducts(){
-        const data = await fetch('https://dummyjson.com/products?limit=10')
-        const fetchedData = await data.json()
-        console.log(fetchedData.products)
-        for(let i=0; i<10;i++){
-            displayItems(fetchedData.products[i])
-        }
-        
-        
-    }
-    getProducts()
-
-    // function to display the added items to the mock page
-    function displayItems(data){
-      const item = `
-      <hr>
-      <div>${data.title}</div>
-      <div>${data.price}</div>
-      <img src="${data.images[0]}" width="150px">
-      <button onClick="addToCart('${data.id}', '${data.price}','${data.discountPercentage}', '${data.images[0]}', '${data.title.replace(/'/g, "\\'")}','${data.brand}')" class="add-to-cart">click me to add to cart</button>
-      `
-      document.getElementById("something").innerHTML += item
-      console.log("Items in cart:", cart_queue);
-    }
-  
 
 
   // function  to add items to the waiting queue 
-  async function addToCart(itemID,itemPrice,itemDiscount,itemImage,itemTitle,itemBrand){
+  async function addProduct(itemID,itemPrice,itemDiscount,itemImage,itemTitle,itemBrand){
 
 
   try {
@@ -148,7 +122,6 @@
   }} catch (error) {
     console.error('Error updating data on JSONBin.io:', error.message);
   }
-  displayAddedItem()
   }
 
 

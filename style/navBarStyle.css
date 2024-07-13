@@ -37,6 +37,7 @@ h2,h3,a {
 a {
 	text-decoration: none;
     font-family: Ubuntu;
+    cursor: pointer;
 }
 
 .logo-div{
@@ -99,12 +100,11 @@ a {
 	text-transform: uppercase;
 	text-align: center;
 	display: block;
-}
-
-.main-nav a {
     color: white;
 	font-size: 1em;
 }
+
+
 
 .main-nav a:hover {
 	color: #93A3B1;

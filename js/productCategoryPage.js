@@ -66,5 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
             divBox.appendChild(price);
             divBox.appendChild(addToCart);
             productsContainer.appendChild(divBox);
+            addToCart.onclick= () => addProduct(product.id,product.price,product.discountPercentage,product.thumbnail,product.title,product.brand);
         });
  }

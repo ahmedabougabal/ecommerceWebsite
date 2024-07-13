@@ -64,6 +64,7 @@ if(product){
                         divBox.appendChild(price);
                         divBox.appendChild(addToCart);
                         productsContainer.appendChild(divBox);
+                        addToCart.onclick= () => addProduct(product.id,product.price,product.discountPercentage,product.thumbnail,product.title,product.brand);
                 }else if(!exist){
                     query.innerHTML = `No results for ${paramValue.get('product')}`
                     query.style.marginBottom='50px';

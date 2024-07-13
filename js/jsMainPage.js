@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', getProducts());
             brand.className = 'products-container-box-brand';
             price.className = 'products-container-box-price';
             addToCart.className = 'products-container-box-addToCart';
-
             image.src = product.thumbnail;
             name.textContent = product.title;
             name.href = `singleProductPage.html?productId=${encodeURIComponent(product.id)}&productName=${encodeURIComponent(product.title)}`;;
@@ -81,6 +80,10 @@ document.addEventListener('DOMContentLoaded', getProducts());
             divBox.appendChild(price);
             divBox.appendChild(addToCart);
             productsContainer.appendChild(divBox);
+
+            addToCart.onclick= () => addProduct(product.id,product.price,product.discountPercentage,product.thumbnail,product.title,product.brand);
+
+
         });
         }
 }

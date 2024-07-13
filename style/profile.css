@@ -1,0 +1,39 @@
+.main {
+    margin:50px auto;
+    font-family: Ubuntu;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 58%;
+}
+
+.main ul{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.8em;
+  margin: 10px;
+}
+
+.main ul li{
+  margin: 10px;
+  color: #c8cfd5;
+  list-style: none;
+
+}
+
+.main h2 {
+    color: rgb(46, 82, 114);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: rgb(46, 82, 114); 
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+  }

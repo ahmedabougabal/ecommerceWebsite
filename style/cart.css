@@ -2,21 +2,25 @@
 body{
     background-color: #ffffff;
     font-size: 16px;
+    font-family: Ubuntu;
 }
 .wrapper{
-    margin-top: 200px;
+    margin: 50px 0;
 }
-h3{
+#details{
     margin-left: 100px;
+    color: rgb(46, 82, 114);
 }   
-
+.product-item{
+    margin:10px 0;
+}
 .cart-details{
    grid-column: span 4;
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    margin-right: 45px;
-   color: #9a9ea5;
+   color: #81858d;
 
 
 }
@@ -32,7 +36,6 @@ h3{
      gap: 120px;
 }
 .product{
-    position: relative;
     right: 120px;
 }
 .summary{
@@ -43,6 +46,7 @@ h3{
     border-radius: 10px;
     color: #9a9ea5;
     width: 350px;
+    margin-left: 200px;
 }
 .sub-wrapper{
     display: grid;  
@@ -85,7 +89,7 @@ h3{
     width: 300px;
     height: 40px;
    
-    background-color: #f45363;
+    background-color: rgb(46, 82, 114);
     border: none;
     border-radius: 10px;
     color: white;
@@ -94,7 +98,6 @@ h3{
     font-weight: 200;
 }
 .checkout:hover{
-    background-color: red;
     cursor: pointer;
     
 }
@@ -126,8 +129,9 @@ h3{
     align-items: center;
   }
   .quantity-control button {
-    background-color: #007bff;
+    background-color: rgb(46, 82, 114);
     color: #fff;
+    border-radius: 5px;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -137,11 +141,14 @@ h3{
     background-color: #0056b3;
   }
   .quantity-input {
+    background-color: #f5f7fa;
     width: 50px;
     text-align: center;
     border: 1px solid #ced4da;
     padding: 6px 10px;
     margin: 0 10px;
+    border-radius: 5px;
+
   }
 
   /* css for the displayed products */ 

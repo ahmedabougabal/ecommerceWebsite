@@ -37,6 +37,9 @@ async function getSingleProduct(productId){
     getProductInfo(product);
     getProductDetails(product);
     getProoductReviews(product);
+    let addToCart =   document.getElementById("add-to-cart");          
+    addToCart.onclick= () => addProduct(product.id,product.price,product.discountPercentage,product.thumbnail,product.title,product.brand);
+
 } 
 
 function getImages(product){
@@ -64,6 +67,7 @@ function getProductInfo(product){
 
     let price = document.getElementById('show-product-price');
     price.textContent = "Price: "+product.price+"$";
+    
 }
 
 function getProductDetails(product){

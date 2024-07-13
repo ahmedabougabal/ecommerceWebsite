@@ -1,4 +1,16 @@
-
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to load content from a file and insert it into an element
+  function loadContent(elementId, filePath) {
+      fetch(filePath)
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+          })
+          .catch(error => console.error('Error loading content:', error));
+  }
+  loadContent('header', '../html/navBar.HTML');
+  loadContent('footer', '../html/Footer.html');
+});
 
   const numberOfItems = document.getElementById("number_of_items")
   const subTotal_total = document.getElementById("subtotal-total")
@@ -169,7 +181,7 @@
       
           const removeImg = document.createElement('img');
           removeImg.classList.add('remove-item');
-          removeImg.src = '/Images/delete.svg';
+          removeImg.src = '../Images/delete.svg';
           removeImg.style.width = '20px'; 
           removeImg.style.height = '20px';
           removeImg.onclick = ()=> removeItem(product)
