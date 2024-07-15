@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link href="style/signstyle.css" rel="stylesheet" />
+    <link href="../style/signstyle.css" rel="stylesheet" />
   </head>
   <body>
     <div id="content">
       <div id="formDiv">
         <div id="store">
-          <img src="Images/cart.svg" />
+          <img src="../Images/cart.svg" />
           <h2>MOHA STORE</h2>
         </div>
         <div id="welcome">
@@ -26,7 +26,7 @@
             <a href="login.html">Sign in</a>
           </p>
         </div>
-        <form id="form" action="html/mainPage.html" method="post" onsubmit="register(event)">
+        <form id="form" action="mainPage.html" method="post" onsubmit="register(event)">
           <input
             class="email"
             type="text"
@@ -56,7 +56,7 @@
               required
             />
             <img
-              src="Images/eye-password-show.svg"
+              src="../Images/eye-password-show.svg"
             />
           </div>
           <label for="password">Minimum 8 characters</label>
@@ -88,20 +88,20 @@
         </div>
         <div id="socialMedia">
           <button onclick="sendToGoogle()">
-            <img src="Images/google.svg" />Google
+            <img src="../Images/google.svg" />Google
           </button>
           <button onclick="sendToFacebook()">
-            <img src="Images/facebook.svg" />Facebook
+            <img src="../Images/facebook.svg" />Facebook
           </button>
           <button onclick="sendToApple()">
-            <img src="Images/apple-173.svg" />Apple
+            <img src="../Images/apple-173.svg" />Apple
           </button>
         </div>
       </div>
       <div id="imageDiv">
-        <img src="Images/account-cover.png" id="poster" />
+        <img src="../Images/account-cover.png" id="poster" />
       </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
