@@ -53,7 +53,7 @@ function register(event) {
   localStorage.setItem('user', JSON.stringify(user));
   localStorage.setItem('token', 'authenticated');
   alert('User registered successfully!');
-  window.location.href = '../html/mainPage.html';
+  window.location.href = 'html/mainPage.html';
 }
 
 function rememberMe() {
