@@ -90,7 +90,7 @@ function login(event) {
     alert('Invalid credentials');
   }
 }
-
+// toggling password visibility
 function togglePasswordVisibility() {
   const passwordField = document.querySelector('#password input[name="password"]');
   const repeatPasswordField = document.getElementById("repeat-password")
