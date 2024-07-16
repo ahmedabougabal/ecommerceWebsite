@@ -13,8 +13,8 @@
     let Update_flag = false;
 
 
-      const binId = '668d8601e41b4d34e40f81e7';
-    const apiKey = '$2a$10$oFTM9uqaBHpQjTjZZLIUauYv6mAMtPqAgdACQF7TE2jYo91EMBBti';
+    const binId = '';
+    const apiKey = '';
 
       
 
